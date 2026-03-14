@@ -36,10 +36,10 @@ This application can be hosted entirely for free using GitHub pages.
 Modifying the template with your own details is incredibly easy:
 
 ### 1. Update Profile Details
-Open `index.html` in any text editor and scroll to the sections wrapped in `.card` classes. Simply replace the placeholder values (like "Aditya Sharma") inside the `<span class="value"></span>` tags with your own information.
+Open the `data.js` file in any text editor. You will see a `profileData` object containing all of the text content used on the page. Simply replace the placeholder values inside the quotes (like `"Aditya Sharma"`) with your own information. The web page will automatically inject these values into the Biodata layout.
 
 ### 2. Update Tamil Translations
-If you add or alter the text values in `index.html`, remember to update the corresponding Tamil translation!  
+If you add or alter the text values in `data.js`, remember to update the corresponding Tamil translation!  
 Scroll towards the bottom of `index.html` and look for the `enToTa` object in the JavaScript block:
 ```javascript
 const enToTa = {

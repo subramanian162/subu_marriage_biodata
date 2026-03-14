@@ -16,6 +16,9 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Profile Data Configuration -->
+    <script src="data.js"></script>
 </head>
 <body>
     <div class="background-animation"></div>
@@ -48,12 +51,12 @@
                     <div class="photo-glow"></div>
                 </div>
                 <div class="hero-text">
-                    <h1 class="name">Aditya Sharma</h1>
-                    <p class="subtitle">Software Engineer based in Bangalore</p>
+                    <h1 class="name" data-key="name">Aditya Sharma</h1>
+                    <p class="subtitle" data-key="subtitle">Software Engineer based in Bangalore</p>
                     <div class="quick-facts">
-                        <span class="badge"><i class="ri-user-line"></i> 28 Years</span>
-                        <span class="badge"><i class="ri-ruler-line"></i> 5' 10"</span>
-                        <span class="badge"><i class="ri-map-pin-line"></i> Bangalore, India</span>
+                        <span class="badge"><i class="ri-user-line"></i> <span data-key="age_badge">28 Years</span></span>
+                        <span class="badge"><i class="ri-ruler-line"></i> <span data-key="height_badge">5' 10"</span></span>
+                        <span class="badge"><i class="ri-map-pin-line"></i> <span data-key="location_badge">Bangalore, India</span></span>
                     </div>
                 </div>
             </div>
@@ -71,18 +74,18 @@
                     </div>
                     <div class="card-body">
                         <ul class="detail-list">
-                            <li><span class="label">Name</span><span class="value">Aditya Sharma</span></li>
-                            <li><span class="label">Gender</span><span class="value">Male</span></li>
-                            <li><span class="label">Date of Birth</span><span class="value">15th August 1995</span></li>
-                            <li><span class="label">Age</span><span class="value">28 Years</span></li>
-                            <li><span class="label">Height</span><span class="value">5 ft 10 in (178 cm)</span></li>
-                            <li><span class="label">Weight</span><span class="value">72 kg</span></li>
-                            <li><span class="label">Blood Group</span><span class="value">O Positive (O+)</span></li>
-                            <li><span class="label">Religion</span><span class="value">Hindu</span></li>
-                            <li><span class="label">Caste / Sub-caste</span><span class="value">Brahmin - Bhumihar</span></li>
-                            <li><span class="label">Mother Tongue</span><span class="value">Hindi</span></li>
-                            <li><span class="label">Marital Status</span><span class="value">Never Married</span></li>
-                            <li><span class="label">Physical Status</span><span class="value">Normal / Fit</span></li>
+                            <li><span class="label">Name</span><span class="value" data-key="name_val">Aditya Sharma</span></li>
+                            <li><span class="label">Gender</span><span class="value" data-key="gender_val">Male</span></li>
+                            <li><span class="label">Date of Birth</span><span class="value" data-key="dob_val">15th August 1995</span></li>
+                            <li><span class="label">Age</span><span class="value" data-key="age_val">28 Years</span></li>
+                            <li><span class="label">Height</span><span class="value" data-key="height_val">5 ft 10 in (178 cm)</span></li>
+                            <li><span class="label">Weight</span><span class="value" data-key="weight_val">72 kg</span></li>
+                            <li><span class="label">Blood Group</span><span class="value" data-key="blood_group_val">O Positive (O+)</span></li>
+                            <li><span class="label">Religion</span><span class="value" data-key="religion_val">Hindu</span></li>
+                            <li><span class="label">Caste / Sub-caste</span><span class="value" data-key="caste_val">Brahmin - Bhumihar</span></li>
+                            <li><span class="label">Mother Tongue</span><span class="value" data-key="mother_tongue_val">Hindi</span></li>
+                            <li><span class="label">Marital Status</span><span class="value" data-key="marital_status_val">Never Married</span></li>
+                            <li><span class="label">Physical Status</span><span class="value" data-key="physical_status_val">Normal / Fit</span></li>
                         </ul>
                     </div>
                 </section>
@@ -97,19 +100,19 @@
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
-                                <h3>Master of Technology (M.Tech)</h3>
-                                <p class="timeline-subtitle">Computer Science & Engineering</p>
-                                <p class="timeline-desc">Indian Institute of Technology (IIT), Delhi</p>
+                                <h3 data-key="edu_1_title">Master of Technology (M.Tech)</h3>
+                                <p class="timeline-subtitle" data-key="edu_1_subtitle">Computer Science & Engineering</p>
+                                <p class="timeline-desc" data-key="edu_1_desc">Indian Institute of Technology (IIT), Delhi</p>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
-                                <h3>Bachelor of Technology (B.Tech)</h3>
-                                <p class="timeline-subtitle">Information Technology</p>
-                                <p class="timeline-desc">National Institute of Technology (NIT), Trichy</p>
+                                <h3 data-key="edu_2_title">Bachelor of Technology (B.Tech)</h3>
+                                <p class="timeline-subtitle" data-key="edu_2_subtitle">Information Technology</p>
+                                <p class="timeline-desc" data-key="edu_2_desc">National Institute of Technology (NIT), Trichy</p>
                             </div>
                         </div>
                         <ul class="detail-list mt-top">
-                            <li><span class="label">Additional Certifications</span><span class="value">AWS Certified Solutions Architect, PMP</span></li>
+                            <li><span class="label">Additional Certifications</span><span class="value" data-key="additional_certs_val">AWS Certified Solutions Architect, PMP</span></li>
                         </ul>
                     </div>
                 </section>
@@ -122,10 +125,10 @@
                     </div>
                     <div class="card-body">
                         <ul class="detail-list">
-                            <li><span class="label">Occupation</span><span class="value">Senior Software Engineer</span></li>
-                            <li><span class="label">Company Name</span><span class="value">Google India Pvt. Ltd.</span></li>
-                            <li><span class="label">Work Location</span><span class="value">Bangalore, Karnataka</span></li>
-                            <li><span class="label">Annual Income</span><span class="value">₹ 45,00,000 PA</span></li>
+                            <li><span class="label">Occupation</span><span class="value" data-key="occupation_val">Senior Software Engineer</span></li>
+                            <li><span class="label">Company Name</span><span class="value" data-key="company_val">Google India Pvt. Ltd.</span></li>
+                            <li><span class="label">Work Location</span><span class="value" data-key="work_location_val">Bangalore, Karnataka</span></li>
+                            <li><span class="label">Annual Income</span><span class="value" data-key="income_val">₹ 45,00,000 PA</span></li>
                         </ul>
                     </div>
                 </section>
@@ -138,10 +141,10 @@
                     </div>
                     <div class="card-body">
                         <ul class="detail-list">
-                            <li><span class="label">Food Habit</span><span class="value">Vegetarian</span></li>
-                            <li><span class="label">Smoking</span><span class="value">No</span></li>
-                            <li><span class="label">Drinking</span><span class="value">No</span></li>
-                            <li><span class="label">Hobbies / Interests</span><span class="value">Photography, Reading Fiction, Trekking, Classical Music</span></li>
+                            <li><span class="label">Food Habit</span><span class="value" data-key="food_val">Vegetarian</span></li>
+                            <li><span class="label">Smoking</span><span class="value" data-key="smoking_val">No</span></li>
+                            <li><span class="label">Drinking</span><span class="value" data-key="drinking_val">No</span></li>
+                            <li><span class="label">Hobbies / Interests</span><span class="value" data-key="hobbies_val">Photography, Reading Fiction, Trekking, Classical Music</span></li>
                         </ul>
                     </div>
                 </section>
@@ -157,14 +160,14 @@
                     </div>
                     <div class="card-body">
                         <ul class="detail-list">
-                            <li><span class="label">Date of Birth</span><span class="value">15-Aug-1995</span></li>
-                            <li><span class="label">Time of Birth</span><span class="value">10:45 AM</span></li>
-                            <li><span class="label">Place of Birth</span><span class="value">New Delhi, India</span></li>
-                            <li><span class="label">Rasi (Zodiac Sign)</span><span class="value">Mesha (Aries)</span></li>
-                            <li><span class="label">Nakshatra (Star)</span><span class="value">Ashwini (Padam 2)</span></li>
-                            <li><span class="label">Gothram</span><span class="value">Kashyapa</span></li>
-                            <li><span class="label">Lagna</span><span class="value">Kanya</span></li>
-                            <li><span class="label">Horoscope Available</span><span class="value status-badge positive">Yes</span></li>
+                            <li><span class="label">Date of Birth</span><span class="value" data-key="horoscope_dob_val">15-Aug-1995</span></li>
+                            <li><span class="label">Time of Birth</span><span class="value" data-key="tob_val">10:45 AM</span></li>
+                            <li><span class="label">Place of Birth</span><span class="value" data-key="pob_val">New Delhi, India</span></li>
+                            <li><span class="label">Rasi (Zodiac Sign)</span><span class="value" data-key="rasi_val">Mesha (Aries)</span></li>
+                            <li><span class="label">Nakshatra (Star)</span><span class="value" data-key="star_val">Ashwini (Padam 2)</span></li>
+                            <li><span class="label">Gothram</span><span class="value" data-key="gothram_val">Kashyapa</span></li>
+                            <li><span class="label">Lagna</span><span class="value" data-key="lagna_val">Kanya</span></li>
+                            <li><span class="label">Horoscope Available</span><span class="value status-badge positive" data-key="horo_avail_val">Yes</span></li>
                         </ul>
                     </div>
                 </section>
@@ -177,15 +180,15 @@
                     </div>
                     <div class="card-body">
                         <ul class="detail-list">
-                            <li><span class="label">Father’s Name</span><span class="value">Mr. Ramesh Sharma</span></li>
-                            <li><span class="label">Father’s Occupation</span><span class="value">Retired Bank Manager (SBI)</span></li>
-                            <li><span class="label">Mother’s Name</span><span class="value">Mrs. Sunita Sharma</span></li>
-                            <li><span class="label">Mother’s Occupation</span><span class="value">Homemaker</span></li>
-                            <li><span class="label">Siblings</span><span class="value">1 Brother, 1 Sister</span></li>
-                            <li><span class="label">Brother(s)</span><span class="value">1 (Married, working as Civil Engineer)</span></li>
-                            <li><span class="label">Sister(s)</span><span class="value">1 (Unmarried, pursuing MBA)</span></li>
-                            <li><span class="label">Family Type</span><span class="value">Nuclear Family</span></li>
-                            <li><span class="label">Native Place</span><span class="value">Varanasi, Uttar Pradesh</span></li>
+                            <li><span class="label">Father’s Name</span><span class="value" data-key="father_name_val">Mr. Ramesh Sharma</span></li>
+                            <li><span class="label">Father’s Occupation</span><span class="value" data-key="father_occ_val">Retired Bank Manager (SBI)</span></li>
+                            <li><span class="label">Mother’s Name</span><span class="value" data-key="mother_name_val">Mrs. Sunita Sharma</span></li>
+                            <li><span class="label">Mother’s Occupation</span><span class="value" data-key="mother_occ_val">Homemaker</span></li>
+                            <li><span class="label">Siblings</span><span class="value" data-key="siblings_val">1 Brother, 1 Sister</span></li>
+                            <li><span class="label">Brother(s)</span><span class="value" data-key="brother_val">1 (Married, working as Civil Engineer)</span></li>
+                            <li><span class="label">Sister(s)</span><span class="value" data-key="sister_val">1 (Unmarried, pursuing MBA)</span></li>
+                            <li><span class="label">Family Type</span><span class="value" data-key="family_type_val">Nuclear Family</span></li>
+                            <li><span class="label">Native Place</span><span class="value" data-key="native_val">Varanasi, Uttar Pradesh</span></li>
                         </ul>
                     </div>
                 </section>
@@ -198,11 +201,11 @@
                     </div>
                     <div class="card-body">
                         <ul class="detail-list">
-                            <li><span class="label">Preferred Age Range</span><span class="value">24 to 27 Years</span></li>
-                            <li><span class="label">Language Preference</span><span class="value">Tamil or English</span></li>
-                            <li><span class="label">Education Preference</span><span class="value">Post Graduate / Graduate in any professional stream</span></li>
-                            <li><span class="label">Location Preference</span><span class="value">Bangalore / Delhi NCR / Remote working</span></li>
-                            <li><span class="label">Other Expectations</span><span class="value">Looking for an understanding, broad-minded, and family-oriented partner who balances modern values with traditional roots.</span></li>
+                            <li><span class="label">Preferred Age Range</span><span class="value" data-key="pref_age_val">24 to 27 Years</span></li>
+                            <li><span class="label">Language Preference</span><span class="value" data-key="pref_lang_val">Tamil or English</span></li>
+                            <li><span class="label">Education Preference</span><span class="value" data-key="pref_edu_val">Post Graduate / Graduate in any professional stream</span></li>
+                            <li><span class="label">Location Preference</span><span class="value" data-key="pref_loc_val">Bangalore / Delhi NCR / Remote working</span></li>
+                            <li><span class="label">Other Expectations</span><span class="value" data-key="pref_other_val">Looking for an understanding, broad-minded, and family-oriented partner who balances modern values with traditional roots.</span></li>
                         </ul>
                     </div>
                 </section>
@@ -218,28 +221,28 @@
                             <i class="ri-user-voice-line"></i>
                             <div>
                                 <span class="label">Contact Person</span>
-                                <span class="value">Ramesh Sharma (Father)</span>
+                                <span class="value" data-key="contact_person_val">Ramesh Sharma (Father)</span>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="ri-phone-line"></i>
                             <div>
                                 <span class="label">Phone Number</span>
-                                <span class="value">+91 98765 43210</span>
+                                <span class="value" data-key="phone_val">+91 98765 43210</span>
                             </div>
                         </div>
                         <div class="contact-item">
                             <i class="ri-mail-line"></i>
                             <div>
                                 <span class="label">Email ID</span>
-                                <span class="value">sharma.matrimony@example.com</span>
+                                <span class="value" data-key="email_val">sharma.matrimony@example.com</span>
                             </div>
                         </div>
                         <div class="contact-item full-width">
                             <i class="ri-map-pin-2-line"></i>
                             <div>
                                 <span class="label">Present Address</span>
-                                <span class="value">Apt 402, Sunshine Residency, HSR Layout Sector 2, Bangalore, Karnataka - 560102</span>
+                                <span class="value" data-key="address_val">Apt 402, Sunshine Residency, HSR Layout Sector 2, Bangalore, Karnataka - 560102</span>
                             </div>
                         </div>
                     </div>
@@ -252,9 +255,20 @@
         </footer>
     </div>
 
-    <!-- Script for scroll animations -->
+    <!-- Script for scroll animations and data injection -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Fetch profile data and populate DOM
+            if (typeof profileData !== 'undefined') {
+                const elementsToUpdate = document.querySelectorAll('[data-key]');
+                elementsToUpdate.forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (profileData[key]) {
+                        el.innerText = profileData[key];
+                    }
+                });
+            }
+
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
