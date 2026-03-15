@@ -1,0 +1,147 @@
+// Single file containing language mapping for easy maintenance
+const enToTa = {
+    // Basic Information
+    "Subramanian G": "சுப்பிரமணியன் ஜி",
+    "Suresh": "சுரேஷ்",
+    "AI Engineer based in Hyderabad": "ஐதராபாத்தில் AI பொறியாளர்",
+    "29 Years": "29 வயது",
+    "5' 5\"": "5' 5\"",
+    "5 ft 5 in (165 cm)": "5 அடி 5 அங்குலம் (165 செமீ)",
+    "Hyderabad": "ஐதராபாத்",
+    "Vasudevanallur, Thenkasi(District)": "வாசுதேவநல்லூர், தென்காசி (மாவட்டம்)",
+
+    // UI Labels - Headers
+    "Personal Details": "தனிப்பட்ட விவரங்கள்",
+    "Education Details": "கல்வி விவரங்கள்",
+    "Professional Details": "தொழில் விவரங்கள்",
+    "Lifestyle Details": "வாழ்க்க முறை விவரங்கள்",
+    "Horoscope Details": "ஜாதக விவரங்கள்",
+    "Family Details": "குடும்ப விவரங்கள்",
+    "Partner Preference": "வாழ்க்கைத் துணை விருப்பங்கள்",
+    "Contact Details": "தொடர்பு விவரங்கள்",
+
+    // UI Labels - Fields (Personal)
+    "Name": "பெயர்",
+    "Alias Name": "மாற்றுப்பெயர்",
+    "Gender": "பாலினம்",
+    "Male": "ஆண்",
+    "Date of Birth": "பிறந்த தேதி",
+    "16th February 1997": "16 பிப்ரவரி 1997",
+    "Age": "வயது",
+    "Height": "உயரம்",
+    "5 ft 5 in (165 cm)": "5 அடி 5 அங்குலம் (165 செமீ)",
+    "Weight": "எடை",
+    "85 kg": "85 கிலோ",
+    "Blood Group": "இரத்த வகை",
+    "O Positive (O+)": "O பாசிட்டிவ் (O+)",
+    "Religion": "மதம்",
+    "Hindu": "இந்து",
+    "Caste / Sub-caste": "சாதி / உட்பிரிவு",
+    "Maravar": "மறவர்",
+    "Mother Tongue": "தாய்மொழி",
+    "Tamil": "தமிழ்",
+    "Marital Status": "திருமண நிலை",
+    "Never Married": "திருமணமாகாதவர்",
+    "Physical Status": "உடல் நிலை",
+    "Normal / Fit": "சாதாரண / தகுதிவாய்ந்த",
+
+    // UI Labels - Fields (Education)
+    "Bachelor of Engineering (B.E)": "பொறியியல் இளங்கலை (B.E)",
+    "Electrical & Electronics Engineering": "மின்சாரம் மற்றும் மின்னணுவியல் பொறியியல்",
+    "St Josephs College Of Engineering (Anna University), Chennai": "செயின்ட் ஜோசப் பொறியியல் கல்லூரி (அண்ணா பல்கலைக்கழகம்), சென்னை",
+    "12th Standard": "12ம் வகுப்பு",
+    "Higher Secondary School (HSS)": "மேல்நிலைப் பள்ளி",
+    "Little Angels Higher Secondary School, Namakkal": "லிட்டில் ஏஞ்சல்ஸ் மேல்நிலைப் பள்ளி, நாமக்கல்",
+    "Additional Certifications": "கூடுதல் சான்றிதழ்கள்",
+
+    // UI Labels - Fields (Professional)
+    "Occupation": "பணி",
+    "Role": "பணி வகை",
+    "Designation": "பதவி",
+    "AI Engineer": "AI பொறியாளர்",
+    "Sr. Platform Engineer II": "மூத்த தளவியல் பொறியாளர் II",
+    "Company Name": "நிறுவனத்தின் பெயர்",
+    "MetLife": "மெட்லைஃப் (MetLife)",
+    "Work Location": "பணிபுரியும் இடம்",
+    "Hyderabad": "ஐதராபாத்",
+    "Work Experience": "பணி அனுபவம்",
+    "7 Years": "7 ஆண்டுகள்",
+    "Work Mode": "பணி முறை",
+    "Hybrid": "கலப்பின முறை (Hybrid)",
+    "Annual Income": "ஆண்டு வருமானம்",
+    "₹ 25 LPA": "₹ 25 லட்சம் / ஆண்டு",
+    "LinkedIn": "லிங்க்டின்",
+    "View Profile": "சுயவிவரம் காண்க",
+
+    // UI Labels - Fields (Lifestyle)
+    "Food Habit": "உணவுப் பழக்கம்",
+    "Non-Vegetarian": "அசைவம்",
+    "Smoking": "புகைப்பிடித்தல்",
+    "No": "இல்லை",
+    "Drinking": "மது அருந்துதல்",
+    "Hobbies / Interests": "பொழுதுபோக்கு / ஆர்வங்கள்",
+    "Video Game, Fittness, Surfing Internet": "வீடியோ கேம், உடற்பயிற்சி, இணையத்தில் உலாவுதல்",
+
+    // UI Labels - Fields (Horoscope)
+    "16-Feb-1997": "16-பிப்-1997",
+    "Time of Birth": "பிறந்த நேரம்",
+    "10:45 AM": "10:45 காலை",
+    "Place of Birth": "பிறந்த இடம்",
+    "Shenkottai, Tamilnadu (India)": "செங்கோட்டை, தமிழ்நாடு (இந்தியா)",
+    "Rasi (Zodiac Sign)": "ராசி",
+    "Rishabam (Taurus)": "ரிஷபம்",
+    "Nakshatra (Star)": "நட்சத்திரம்",
+    "Rohini ()": "ரோகிணி",
+    "Gothram": "கோத்திரம்",
+    "Kashyapa": "காஷ்யப",
+    "Lagna": "லக்னம்",
+    "Kanya": "கன்னி",
+    "Horoscope Available": "ஜாதகம் கிடைக்குமா",
+    "Yes": "ஆம்",
+
+    // UI Labels - Fields (Family)
+    "Father’s Name": "தந்தையின் பெயர்",
+    "Mr. Ganesan V": "திரு. கணேசன் வி",
+    "Father’s Occupation": "தந்தையின் தொழில்",
+    "Farmer": "விவசாயி",
+    "Mother’s Name": "தாயின் பெயர்",
+    "Mrs. Manimegalai G": "திருமதி. மணிமேகலை ஜி",
+    "Mother’s Occupation": "தாயின் தொழில்",
+    "Homemaker": "குடும்பத்தலைவி",
+    "Siblings": "உடன்பிறப்புகள்",
+    "2 Younger Sisters": "2 தங்கைகள்",
+    "Sister(s)": "சகோதரி(கள்)",
+    "2 (Married, Homemaker)": "2 (திருமணமானவர்கள், குடும்பத்தலைவி)",
+    "Family Type": "குடும்ப வகை",
+    "Nuclear Family": "தனிக்குடும்பம்",
+    "Native Place": "பூர்வீகம்",
+    "Vasudevanallur, Tenkasi(District) Tamilnadu (India)": "வாசுதேவநல்லூர், தென்காசி (மாவட்டம்) தமிழ்நாடு (இந்தியா)",
+
+    // UI Labels - Fields (Partner Pref)
+    "Preferred Age Range": "விரும்பும் வயது",
+    "24 to 27 Years": "24 முதல் 27 வயது வரை",
+    "Language Preference": "மொழி விருப்பம்",
+    "Education Preference": "கல்வி விருப்பம்",
+    "Post Graduate / Graduate in any professional stream": "முதுகலை / இளங்கலை",
+    "Location Preference": "இருப்பிட விருப்பம்",
+    "Remote working": "ரிமோட் (Remote working)",
+    "Other Expectations": "பிற எதிர்பார்ப்புகள்",
+    "Looking for an understanding, broad-minded, and family-oriented partner who balances modern values with traditional roots.": "நவீன மதிப்புகளை பாரம்பரிய வேர்களுடன் சமநிலைப்படுத்தும் புரிந்துணர்வுள்ள, பரந்த மனப்பான்மை கொண்ட மற்றும் குடும்பத்தைச் சார்ந்த துணையைத் தேடுகிறேன்.",
+
+    // UI Labels - Fields (Contact)
+    "Contact Person": "தொடர்பு நபர்",
+    "Ganesan V (Father)": "கணேசன் வி (தந்தை)",
+    "Phone Number": "தொலைபேசி எண்",
+    "+91 97917 49031": "+91 97917 49031",
+    "Email ID": "மின்னஞ்சல் முகவரி",
+    "subramanianganesan162@gmail.com": "subramanianganesan162@gmail.com",
+    "Present Address": "தற்போதைய முகவரி",
+    "7F, Pudhumandhai 2nd Street, Vasudevanallur-627758, Tenkasi(District) Tamilnadu (India)": "7F, புதுமந்தை 2வது தெரு, வாசுதேவநல்லூர்-627758, தென்காசி (மாவட்டம்) தமிழ்நாடு (இந்தியா)",
+
+    // Footer & Actions
+    "Created with sincerity and hope.": "அக்கறையுடனும் நம்பிக்கையுடனும் உருவாக்கப்பட்டது.",
+    "Download BioData": "பயோடேட்டா பதிவிறக்கு"
+};
+
+const taToEn = {};
+for (let k in enToTa) taToEn[enToTa[k]] = k;
