@@ -38,7 +38,7 @@
         <div class="top-action-bar" data-html2canvas-ignore="true">
             <div class="action-buttons">
                 <button class="btn" onclick="downloadImage()">
-                    <i class="ri-image-line"></i> <span>Download BioData</span>
+                    <i class="ri-download-2-line"></i> <span>Download BioData</span>
                 </button>
             </div>
 
@@ -116,6 +116,11 @@
                                     data-key="marital_status_val">Never Married</span></li>
                             <li><span class="label">Physical Status</span><span class="value"
                                     data-key="physical_status_val">Normal / Fit</span></li>
+                            <li><span class="label">Instagram</span><span class="value"><a data-href="instagram_val"
+                                        href="https://www.instagram.com/subu_162?igsh=MWdrd29zMGM4bW8wNQ=="
+                                        target="_blank" rel="noopener" class="link-value"><i
+                                            class="ri-instagram-fill"></i> View
+                                        Profile</a></span></li>
                         </ul>
                     </div>
                 </section>
@@ -144,10 +149,6 @@
                                     Trichy</p>
                             </div>
                         </div>
-                        <ul class="detail-list mt-top">
-                            <li><span class="label">Additional Certifications</span><span class="value"
-                                    data-key="additional_certs_val">AWS Certified Solutions Architect, PMP</span></li>
-                        </ul>
                     </div>
                 </section>
 
@@ -195,7 +196,7 @@
                             </li>
                             <li><span class="label">Drinking</span><span class="value" data-key="drinking_val">No</span>
                             </li>
-                            <li><span class="label">Hobbies / Interests</span><span class="value"
+                            <li class="vertical"><span class="label">Hobbies / Interests</span><span class="value"
                                     data-key="hobbies_val">Photography, Reading Fiction, Trekking, Classical
                                     Music</span></li>
                         </ul>
@@ -270,16 +271,17 @@
                     </div>
                     <div class="card-body">
                         <ul class="detail-list">
-                            <li><span class="label">Preferred Age Range</span><span class="value"
-                                    data-key="pref_age_val">24 to 27 Years</span></li>
                             <li><span class="label">Language Preference</span><span class="value"
                                     data-key="pref_lang_val">Tamil or English</span></li>
+                            <li><span class="label">Food Preference</span><span class="value"
+                                    data-key="pref_food_val">Non-Vegetarian</span></li>
                             <li><span class="label">Education Preference</span><span class="value"
                                     data-key="pref_edu_val">Post Graduate / Graduate in any professional stream</span>
                             </li>
-                            <li><span class="label">Location Preference</span><span class="value"
-                                    data-key="pref_loc_val">Bangalore / Delhi NCR / Remote working</span></li>
-                            <li><span class="label">Other Expectations</span><span class="value"
+                            <li class="vertical"><span class="label">Lifestyle Preference</span><span class="value"
+                                    data-key="pref_lifestyle_val">Prefer a person who maintains a healthy lifestyle and
+                                    positive mindset.</span></li>
+                            <li class="vertical"><span class="label">Other Expectations</span><span class="value"
                                     data-key="pref_other_val">Looking for an understanding, broad-minded, and
                                     family-oriented partner who balances modern values with traditional roots.</span>
                             </li>
@@ -329,7 +331,13 @@
         </div>
 
         <footer class="footer section-fade" style="--delay: 5">
-            <p>Created with sincerity and hope. <i class="ri-heart-fill" style="color: var(--accent-color)"></i></p>
+            <p data-key="footer_note">Created with sincerity and hope by Subramanian <i class="ri-heart-fill"
+                    style="color: var(--accent-color)"></i></p>
+            <p class="online-ref" data-key="online_ref">For more information, refer the Online version of My BioData
+                under
+                <a href="https://subramanian162.github.io/subu_marriage_biodata/"
+                    target="_blank">https://subramanian162.github.io/subu_marriage_biodata/</a>
+            </p>
         </footer>
     </div>
 
@@ -398,14 +406,22 @@
             const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
             let node;
             const nodesToReplace = [];
+
+            // Helper to normalize whitespace (converts newlines/tabs/multiple spaces to single space)
+            const normalize = (str) => str.replace(/\s+/g, ' ').trim();
+
             while (node = walk.nextNode()) {
-                let text = node.nodeValue.trim();
-                if (text && dict[text]) {
-                    nodesToReplace.push({ node, originalText: text, newText: dict[text] });
+                let rawText = node.nodeValue;
+                let cleanText = normalize(rawText);
+
+                if (cleanText && dict[cleanText]) {
+                    nodesToReplace.push({ node, originalText: rawText, newText: dict[cleanText] });
                 }
             }
+
             nodesToReplace.forEach(n => {
-                n.node.nodeValue = n.node.nodeValue.replace(n.originalText, n.newText);
+                // Completely replace the text node content with the translation
+                n.node.nodeValue = n.newText;
             });
 
             if (lang === 'ta') {

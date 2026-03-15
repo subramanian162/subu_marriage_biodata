@@ -2,7 +2,7 @@ const profileData = {
     // Basic Information
     profile_image: "images/profile.jpg",
     name: "Subramanian G",
-    subtitle: "AI Engineer based in Hyderabad",
+    subtitle: "Working as AI Engineer on MetLife, based in Hyderabad",
     age_badge: "29 Years",
     height_badge: "5 ft 5 in (165 cm)",
     work_location_badge: "Hyderabad",
@@ -22,6 +22,7 @@ const profileData = {
     mother_tongue_val: "Tamil",
     marital_status_val: "Never Married",
     physical_status_val: "Normal / Fit",
+    instagram_val: "https://www.instagram.com/subu_162?igsh=MWdrd29zMGM4bW8wNQ==",
 
     // Education Details
     edu_1_title: "Bachelor of Engineering (B.E)",
@@ -30,7 +31,6 @@ const profileData = {
     edu_2_title: "12th Standard",
     edu_2_subtitle: "Higher Secondary School (HSS)",
     edu_2_desc: "Little Angels Higher Secondary School, Namakkal",
-    additional_certs_val: "",
 
     // Professional Details
     role_val: "AI Engineer",
@@ -46,7 +46,7 @@ const profileData = {
     food_val: "Non-Vegetarian",
     smoking_val: "No",
     drinking_val: "No",
-    hobbies_val: "Video Game, Fittness, Surfing Internet",
+    hobbies_val: "Learning new technologies, building software projects, working out at the gym, maintaining a healthy lifestyle, playing video games, watching movies, occasionally exploring new foods, and learning about personal and financial development.",
 
     // Horoscope Details
     horoscope_dob_val: "16-Feb-1997",
@@ -66,18 +66,18 @@ const profileData = {
     siblings_val: "2 Younger Sisters",
     sister_val: "2 (Married, Homemaker)",
     family_type_val: "Nuclear Family",
-    native_val: "Vasudevanallur, Tenkasi(District) Tamilnadu (India)",
+    native_val: "Vasudevanallur, Thenkasi(District)",
 
     // Partner Preference
-    pref_age_val: "24 to 27 Years",
+    pref_lifestyle_val: "Prefer a person who maintains a healthy lifestyle and positive mindset.",
     pref_lang_val: "Tamil",
     pref_edu_val: "Post Graduate / Graduate in any professional stream",
-    pref_loc_val: "Remote working",
-    pref_other_val: "Looking for an understanding, broad-minded, and family-oriented partner who balances modern values with traditional roots.",
+    pref_food_val: "Non-Vegetarian",
+    pref_other_val: "Looking for a kind, understanding, and family-oriented partner with good values, who respects relationships, maintains a positive outlook, and supports mutual growth in both personal and professional life.",
 
     // Contact Details
     contact_person_val: "Ganesan V (Father)",
     phone_val: "+91 97917 49031",
     email_val: "subramanianganesan162@gmail.com",
-    address_val: "7F, Pudhumandhai 2nd Street, \nVasudevanallur-627758, \nTenkasi(District) Tamilnadu (India)"
+    address_val: "7F, Pudhumandhai 2nd Street, Vasudevanallur-627758, Tenkasi(District) Tamilnadu (India)"
 };

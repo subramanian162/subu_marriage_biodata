@@ -277,6 +277,17 @@ body {
     position: relative;
 }
 
+.detail-list li.vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.detail-list li.vertical .value {
+    text-align: left;
+    width: 100%;
+}
+
 .detail-list li:last-child {
     border-bottom: none;
 }
@@ -637,6 +648,34 @@ input:checked + .slider:before {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--card-border);
+}
+
+.footer p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.online-ref {
+    font-size: 0.85rem !important;
+    opacity: 0.8;
+}
+
+.online-ref a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.online-ref a:hover {
+    text-decoration: underline;
 }
 
 /* --- Mobile Responsiveness --- */
