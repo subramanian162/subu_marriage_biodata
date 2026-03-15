@@ -237,6 +237,16 @@ body {
     color: var(--text-primary);
 }
 
+.section-divider {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin: 25px 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-light);
+    display: inline-block;
+}
+
 .icon-box {
     width: 45px;
     height: 45px;

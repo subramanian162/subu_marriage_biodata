@@ -20,6 +20,7 @@ const enToTa = {
     "Family Details": "குடும்ப விவரங்கள்",
     "Partner Preference": "வாழ்க்கைத் துணை விருப்பங்கள்",
     "Contact Details": "தொடர்பு விவரங்கள்",
+    "Previous Experience": "முந்தைய அனுபவம்",
 
     // UI Labels - Fields (Personal)
     "Name": "பெயர்",
@@ -73,6 +74,12 @@ const enToTa = {
     "₹ 25 LPA": "₹ 25 லட்சம் / ஆண்டு",
     "LinkedIn": "லிங்க்டின்",
     "View Profile": "சுயவிவரம் காண்க",
+
+    // Work History Translations
+    "Cognizant Technology Solutions": "காக்னிசென்ட் டெக்னாலஜி சொல்யூஷன்ஸ் (Cognizant)",
+    "Senior Associate": "சீனியர் அசோசியேட் (Senior Associate)",
+    "Tata Consultancy Services (TCS)": "டாடா கன்சல்டன்சி சர்வீசஸ் (TCS)",
+    "System Engineer": "சிஸ்டம் இன்ஜினியர் (System Engineer)",
 
     // UI Labels - Fields (Lifestyle)
     "Food Habit": "உணவுப் பழக்கம்",

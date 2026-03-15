@@ -42,6 +42,15 @@ const profileData = {
     annual_income_val: "₹ 25 LPA",
     linkedin_val: "https://www.linkedin.com/in/subramanian-g-77b633167/",
 
+    // Work History
+    exp_1_org: "Cognizant Technology Solutions",
+    exp_1_pos: "Associate",
+    exp_1_dur: "2019 - 2022",
+    exp_2_org: "Tata Consultancy Services (TCS)",
+    exp_2_pos: "IT Analyst at Grade C2",
+    exp_2_dur: "2022 - 2026",
+    prev_exp_header: "Previous Experience",
+
     // Lifestyle Details
     food_val: "Non-Vegetarian",
     smoking_val: "No",
