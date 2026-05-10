@@ -5,18 +5,20 @@ const profileData = {
     subtitle: "Working as Senior Full Stack Software Engineer on MetLife, based in Hyderabad",
     age_badge: "29 Years",
     height_badge: "5 ft 5 in (165 cm)",
+    dob_badge: "16th February 1997",
+    weight_badge: "85 kg",
     work_location_badge: "Hyderabad",
     native_badge: "Vasudevanallur, Thenkasi(District)",
 
     // Personal Details
-    name_val: "Subramanian G",
+    name_val: "Subramanian (alias) Suresh",
     alias_val: "Suresh",
     gender_val: "Male",
     dob_val: "16th February 1997",
     age_val: "29 Years",
     height_val: "5 ft 5 in (165 cm)",
     weight_val: "85 kg",
-    blood_group_val: "O Positive (O+)",
+    blood_group_val: "O+",
     religion_val: "Hindu",
     caste_val: "Maravar",
     mother_tongue_val: "Tamil",
@@ -38,7 +40,7 @@ const profileData = {
     work_location_val: "Hyderabad",
     work_exp_val: "6+ Years",
     work_mode_val: "Hybrid",
-    annual_income_val: "₹ 25 LPA",
+    annual_income_val: "₹ 20 to 25 LPA",
     linkedin_val: "https://www.linkedin.com/in/subramanian-g-77b633167/",
 
     // Work History

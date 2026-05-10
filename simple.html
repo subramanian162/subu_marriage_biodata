@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple BioData View - Subramanian</title>
+    <meta name="description" content="Simple marriage biodata view for Subramanian">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="js/lang.js"></script>
+    <script src="js/data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body { background: #f8f4ee; }
+        .simple-page { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
+        .simple-header { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 35px rgba(0,0,0,0.06); margin-bottom: 32px; }
+        .simple-header h1 { font-size: 3rem; margin-bottom: 8px; }
+        .simple-header p { color: #5d5d5d; line-height: 1.6; margin-bottom: 18px; }
+        .simple-badges { display: flex; flex-wrap: wrap; gap: 12px; }
+        .simple-badge { background: #f3e9de; color: #333; padding: 10px 14px; border-radius: 14px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+        .simple-badge i { color: #d4af37; font-size: 1.05rem; }
+        .simple-badge .badge-text { display: inline-block; }
+        .page-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+        .page-actions a, .page-actions button { text-decoration: none; border: none; background: white; color: #333; padding: 10px 16px; border-radius: 12px; box-shadow: 0 8px 18px rgba(0,0,0,0.08); cursor: pointer; font-weight: 600; }
+        .simple-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .info-card { background: white; border-radius: 20px; padding: 24px; box-shadow: 0 10px 35px rgba(0,0,0,0.06); margin-bottom: 32px; }
+        .info-card h2 { margin-bottom: 18px; font-size: 1.4rem; }
+        .info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 12px; }
+        .info-label { color: #767676; font-size: 0.92rem; }
+        .info-value { font-weight: 600; font-size: 1rem; }
+        .info-row.full { grid-column: 1 / -1; }
+        .simple-note { margin-top: 10px; color: #7a7a7a; font-size: 0.95rem; }
+        .footer { text-align: center; margin-top: 30px; color: #6b6b6b; font-size: 0.95rem; }
+        @media (max-width: 860px) { .simple-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="simple-page">
+        <div class="page-actions" data-html2canvas-ignore="true">
+            <a href="index.html">Back to Full View</a>
+            <button onclick="downloadA4Pdf()">Download A4 PDF</button>
+            <label class="toggle-switch" style="margin-left:auto;">
+                <input type="checkbox" id="lang-switch-simple">
+                <span class="slider round"></span>
+            </label>
+            <span class="lang-lbl">EN</span>
+            <span class="lang-lbl">தமிழ்</span>
+        </div>
+
+        <section class="simple-header">
+            <h1 data-key="name_val">Subramanian (alias) Suresh</h1>
+            <p class="edu-detail"><span data-key="edu_1_title">Bachelor of Engineering (B.E)</span>, <span data-key="edu_1_subtitle">Electrical & Electronics Engineering</span></p>
+            <p class="subtitle" data-key="subtitle">Working as Senior Full Stack Software Engineer on MetLife, based in Hyderabad</p>
+            <div class="simple-badges">
+                <span class="simple-badge"><i class="ri-calendar-event-line"></i><span class="badge-text" data-key="dob_badge">16th February 1997</span></span>
+                <span class="simple-badge"><i class="ri-user-line"></i><span class="badge-text" data-key="age_badge">29 Years</span></span>
+                <span class="simple-badge"><i class="ri-ruler-line"></i><span class="badge-text" data-key="height_badge">5 ft 5 in (165 cm)</span></span>
+            </div>
+        </section>
+
+        <section class="info-card simple-unified-card">
+            <h2>BioData Summary</h2>
+            <div class="info-row"><div class="info-label">Name</div><div class="info-value" data-key="name_val">Subramanian G</div></div>
+            <div class="info-row"><div class="info-label">Blood Group</div><div class="info-value" data-key="blood_group_val">O+</div></div>
+            <div class="info-row"><div class="info-label">Religion / Caste</div><div class="info-value"><span data-key="religion_val">Hindu</span> / <span data-key="caste_val">Maravar</span></div></div>            
+            <div class="info-row"><div class="info-label">Place of Birth</div><div class="info-value" data-key="pob_val">Shenkottai, Tamilnadu (India)</div></div>
+            <div class="info-row"><div class="info-label">Rasi</div><div class="info-value" data-key="rasi_val">Rishabam (Taurus)</div></div>
+            <div class="info-row"><div class="info-label">Star</div><div class="info-value" data-key="star_val">Rohini</div></div>
+            <div class="info-row"><div class="info-label">Horoscope Available</div><div class="info-value" data-key="horo_avail_val">Yes</div></div>
+            <div class="info-row"><div class="info-label">Mother Tongue</div><div class="info-value" data-key="mother_tongue_val">Tamil</div></div>
+            <div class="info-row"><div class="info-label">Marital Status</div><div class="info-value" data-key="marital_status_val">Never Married</div></div>
+            <div class="info-row"><div class="info-label">Physical Status</div><div class="info-value" data-key="physical_status_val">Normal / Fit</div></div>
+            <div class="info-row"><div class="info-label">Company</div><div class="info-value" data-key="company_val">MetLife</div></div>
+            <div class="info-row"><div class="info-label">Designation / Work Experience</div><div class="info-value"><span data-key="designation_val">Sr. Platform Engineer II</span> / <span data-key="work_exp_val">6+ Years</span></div></div>
+            <div class="info-row"><div class="info-label">Work Mode</div><div class="info-value" data-key="work_mode_val">Hybrid</div></div>
+            <div class="info-row"><div class="info-label">Annual Income</div><div class="info-value" data-key="annual_income_val">₹ 20 to 25 LPA</div></div>
+            <div class="info-row"><div class="info-label">Father</div><div class="info-value"><span data-key="father_name_val">Mr. Ganesan V</span> / <span data-key="father_occ_val">Business</span></div></div>
+            <div class="info-row"><div class="info-label">Mother</div><div class="info-value"><span data-key="mother_name_val">Mrs. Manimegalai G</span> / <span data-key="mother_occ_val">Homemaker</span></div></div>
+            <div class="info-row"><div class="info-label">Sister(s) / Family Type</div><div class="info-value"><span data-key="sister_val">2 (Married, Homemaker)</span> / <span data-key="family_type_val">Nuclear Family</span></div></div>
+            <div class="info-row"><div class="info-label">Native Place</div><div class="info-value" data-key="native_val">Vasudevanallur, Thenkasi(District)</div></div>
+            <div class="info-row"><div class="info-label">Smoking</div><div class="info-value" data-key="smoking_val">No</div></div>
+            <div class="info-row"><div class="info-label">Drinking</div><div class="info-value" data-key="drinking_val">No</div></div>
+        </section>
+
+        <section class="info-card simple-unified-card">
+            <h2>Contact Details</h2>
+            <div class="info-row"><div class="info-label">Contact Person</div><div class="info-value" data-key="contact_person_val">Ganesan V (Father)</div></div>
+            <div class="info-row"><div class="info-label">Phone</div><div class="info-value" data-key="phone_val">+91 97917 49031</div></div>
+            <div class="info-row full"><div class="info-label">Email</div><div class="info-value" data-key="email_val">subramanianganesan162@gmail.com</div></div>
+            <div class="info-row full"><div class="info-label">Address</div><div class="info-value" data-key="address_val">7F, Pudhumandhai 2nd Street, Vasudevanallur-627758, Tenkasi(District) Tamilnadu (India)</div></div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof profileData !== 'undefined') {
+                const elementsToUpdate = document.querySelectorAll('[data-key]');
+                elementsToUpdate.forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (profileData[key]) {
+                        if (el.tagName === 'A' && el.hasAttribute('href')) {
+                            el.href = profileData[key];
+                        }
+                        el.innerText = profileData[key];
+                    }
+                });
+                const linkedin = document.getElementById('linkedin-link');
+                if (linkedin && profileData.linkedin_val) {
+                    linkedin.href = profileData.linkedin_val;
+                }
+            }
+
+            document.getElementById('lang-switch-simple').addEventListener('change', function (e) {
+                toggleLanguage(e.target.checked ? 'ta' : 'en');
+            });
+        });
+
+        function toggleLanguage(lang) {
+            const dict = lang === 'ta' ? enToTa : taToEn;
+            const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+            let node;
+            const nodesToReplace = [];
+
+            const normalize = (str) => str.replace(/\s+/g, ' ').trim();
+            while (node = walk.nextNode()) {
+                let rawText = node.nodeValue;
+                let cleanText = normalize(rawText);
+                if (cleanText && dict[cleanText]) {
+                    nodesToReplace.push({ node, newText: dict[cleanText] });
+                }
+            }
+            nodesToReplace.forEach(n => n.node.nodeValue = n.newText);
+            if (lang === 'ta') {
+                document.title = 'திருமண பயோடாட்டா - சுப்பிரமணியன்';
+            } else {
+                document.title = 'Simple BioData View - Subramanian';
+            }
+        }
+
+        function downloadA4Pdf(retryWithoutImage = false) {
+            if (typeof html2canvas === 'undefined' || typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+                alert('Still loading export libraries, please try again in a moment.');
+                return;
+            }
+            const element = document.querySelector('.simple-page');
+            const options = { scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#f8f4ee', windowWidth: 1200, scrollX: 0, scrollY: -window.scrollY };
+            html2canvas(element, options).then(canvas => {
+                const pdf = new window.jspdf.jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                const ratio = Math.min(pdfWidth / canvas.width, pdfHeight / canvas.height);
+                const imgWidth = canvas.width * ratio;
+                const imgHeight = canvas.height * ratio;
+                const x = (pdfWidth - imgWidth) / 2;
+                const y = (pdfHeight - imgHeight) / 2;
+                pdf.addImage(canvas.toDataURL('image/png'), 'PNG', x, y, imgWidth, imgHeight);
+                pdf.save('Simple-BioData-A4.pdf');
+            }).catch(err => alert('Could not save PDF: ' + err.message));
+        }
+    </script>
+</body>
+</html>
