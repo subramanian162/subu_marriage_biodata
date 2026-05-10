@@ -28,6 +28,7 @@
 
     <!-- html2canvas: load early so it is always ready on button click -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -39,6 +40,9 @@
             <div class="action-buttons">
                 <button class="btn" onclick="downloadImage()">
                     <i class="ri-download-2-line"></i> <span>Download BioData</span>
+                </button>
+                <button class="btn btn-a4" onclick="downloadA4Pdf()">
+                    <i class="ri-file-pdf-line"></i> <span>Download A4 PDF</span>
                 </button>
             </div>
 
@@ -277,39 +281,19 @@
                 </section>
 
                 <!-- Contact Details -->
-                <section class="card glass-panel section-fade contact-card" style="--delay: 4.5">
+                <section class="card glass-panel section-fade contact-card compact-contact" style="--delay: 4.5">
                     <div class="card-header">
                         <div class="icon-box"><i class="ri-contacts-book-2-line"></i></div>
                         <h2>Contact Details</h2>
                     </div>
-                    <div class="card-body contact-grid">
-                        <div class="contact-item">
-                            <i class="ri-user-voice-line"></i>
+                    <div class="card-body contact-grid compact-contact-grid">
+                        <div class="contact-item compact-contact-item full-width">
+                            <i class="ri-contacts-book-2-line"></i>
                             <div>
-                                <span class="label">Contact Person</span>
-                                <span class="value" data-key="contact_person_val">Ramesh Sharma (Father)</span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="ri-phone-line"></i>
-                            <div>
-                                <span class="label">Phone Number</span>
-                                <span class="value" data-key="phone_val">+91 98765 43210</span>
-                            </div>
-                        </div>
-                        <div class="contact-item full-width">
-                            <i class="ri-mail-line"></i>
-                            <div>
-                                <span class="label">Email ID</span>
-                                <span class="value" data-key="email_val">sharma.matrimony@example.com</span>
-                            </div>
-                        </div>
-                        <div class="contact-item full-width">
-                            <i class="ri-map-pin-2-line"></i>
-                            <div>
-                                <span class="label">Present Address</span>
-                                <span class="value" data-key="address_val">Apt 402, Sunshine Residency, HSR Layout
-                                    Sector 2, Bangalore, Karnataka - 560102</span>
+                                <span class="label">Contact</span>
+                                <span class="value"><span data-key="contact_person_val">Ramesh Sharma (Father)</span> · <span data-key="phone_val">+91 98765 43210</span> · <span data-key="email_val">sharma.matrimony@example.com</span></span>
+                                <span class="label">Address</span>
+                                <span class="value" data-key="address_val">Apt 402, Sunshine Residency, HSR Layout Sector 2, Bangalore, Karnataka - 560102</span>
                             </div>
                         </div>
                     </div>
@@ -493,6 +477,74 @@
                     } else {
                         alert('Could not save image: ' + err.message);
                         if (btnSpan) btnSpan.innerText = 'Download BioData';
+                        if (btn) btn.disabled = false;
+                    }
+                });
+            }, 250);
+        }
+
+        function downloadA4Pdf(retryWithoutImage = false) {
+            if (typeof html2canvas === 'undefined' || typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+                alert('Still loading export libraries, please try again in a moment.');
+                return;
+            }
+
+            const btn = document.querySelector('.btn-a4');
+            const btnSpan = btn ? btn.querySelector('span') : null;
+            if (btnSpan) btnSpan.innerText = 'Preparing…';
+            if (btn) btn.disabled = true;
+
+            const element = document.querySelector('.container');
+            makeVisibleForExport();
+            element.classList.add('export-mode');
+
+            const options = {
+                scale: 2,
+                useCORS: true,
+                allowTaint: true,
+                backgroundColor: '#fffbf9',
+                windowWidth: 1200,
+                scrollX: 0,
+                scrollY: -window.scrollY
+            };
+
+            if (retryWithoutImage) {
+                options.ignoreElements = (el) => el.classList.contains('profile-photo') || el.classList.contains('photo-glow');
+            }
+
+            setTimeout(() => {
+                html2canvas(element, options).then(canvas => {
+                    try {
+                        const pdf = new window.jspdf.jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+                        const pdfWidth = pdf.internal.pageSize.getWidth();
+                        const pdfHeight = pdf.internal.pageSize.getHeight();
+                        const ratio = Math.min(pdfWidth / canvas.width, pdfHeight / canvas.height);
+                        const imgWidth = canvas.width * ratio;
+                        const imgHeight = canvas.height * ratio;
+                        const x = (pdfWidth - imgWidth) / 2;
+                        const y = (pdfHeight - imgHeight) / 2;
+
+                        const pageData = canvas.toDataURL('image/png');
+                        pdf.addImage(pageData, 'PNG', x, y, imgWidth, imgHeight);
+                        pdf.save('Marriage-Biodata-A4.pdf');
+                    } catch (e) {
+                        if (!retryWithoutImage) {
+                            downloadA4Pdf(true);
+                            return;
+                        }
+                        throw e;
+                    } finally {
+                        element.classList.remove('export-mode');
+                        if (btnSpan) btnSpan.innerText = 'Download A4 PDF';
+                        if (btn) btn.disabled = false;
+                    }
+                }).catch(err => {
+                    element.classList.remove('export-mode');
+                    if (!retryWithoutImage) {
+                        downloadA4Pdf(true);
+                    } else {
+                        alert('Could not save PDF: ' + err.message);
+                        if (btnSpan) btnSpan.innerText = 'Download A4 PDF';
                         if (btn) btn.disabled = false;
                     }
                 });
