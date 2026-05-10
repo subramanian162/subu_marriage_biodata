@@ -3,7 +3,7 @@ const enToTa = {
     // Basic Information
     "Subramanian G": "சுப்பிரமணியன் க",
     "Suresh": "சுரேஷ்",
-    "Working as AI Engineer on MetLife, based in Hyderabad": "MetLife நிறுவனத்தில் AI Engineer ஆக ஹைதராபாத் நகரத்தை அடிப்படையாகக் கொண்டு பணிபுரிந்து வருகிறேன்.",
+    "Working as Senior Full Stack Software Engineer on MetLife, based in Hyderabad": "MetLife நிறுவனத்தில் Senior Full Stack Software Engineer ஆக ஹைதராபாத் நகரத்தை அடிப்படையாகக் கொண்டு பணிபுரிந்துகொண்டு இருக்கிறேன்.",
     "29 Years": "29 வயது",
     "5' 5\"": "5' 5\"",
     "5 ft 5 in (165 cm)": "5 அடி 5 அங்குலம் (165 செமீ)",
@@ -28,15 +28,18 @@ const enToTa = {
     "Gender": "பாலினம்",
     "Male": "ஆண்",
     "Date of Birth": "பிறந்த தேதி",
+    "Date of Birth / Age": "பிறந்த தேதி / வயது",
     "16th February 1997": "16 பிப்ரவரி 1997",
     "Age": "வயது",
     "Height": "உயரம்",
+    "Height / Weight": "உயரம் / எடை",
     "5 ft 5 in (165 cm)": "5 அடி 5 அங்குலம் (165 செமீ)",
     "Weight": "எடை",
     "85 kg": "85 கிலோ",
     "Blood Group": "இரத்த வகை",
     "O Positive (O+)": "O பாசிட்டிவ் (O+)",
     "Religion": "மதம்",
+    "Religion / Caste": "மதம் / சாதி",
     "Hindu": "இந்து",
     "Caste / Sub-caste": "சாதி / உட்பிரிவு",
     "Maravar": "மறவர்",
@@ -58,7 +61,6 @@ const enToTa = {
 
     // UI Labels - Fields (Professional)
     "Occupation": "பணி",
-    "Role": "பணி வகை",
     "Designation": "பதவி",
     "AI Engineer": "AI Engineer",
     "Sr. Platform Engineer II": "Sr. Platform Engineer II",
@@ -110,9 +112,12 @@ const enToTa = {
 
     // UI Labels - Fields (Family)
     "Father’s Name": "தந்தையின் பெயர்",
+    "Father": "தந்தை",
     "Mr. Ganesan V": "திரு. கணேசன் வீ",
     "Father’s Occupation": "தந்தையின் தொழில்",
     "Farmer": "விவசாயி",
+    "Business": "வணிகம்",
+    "Mother": "தாய்",
     "Mother’s Name": "தாயின் பெயர்",
     "Mrs. Manimegalai G": "திருமதி. மணிமேகலை ஜி",
     "Mother’s Occupation": "தாயின் தொழில்",
@@ -139,9 +144,6 @@ const enToTa = {
     "Prefer a person who maintains a healthy lifestyle and positive mindset.": "நேர்மறையான சிந்தனை மற்றும் ஆரோக்கியமான வாழ்க்கை முறையைப் பின்பற்றும் நபரை விரும்புகிறேன்.",
     "Location Preference": "இருப்பிட விருப்பம்",
     "Remote working": "ரிமோட் (Remote working)",
-    "Other Expectations": "பிற எதிர்பார்ப்புகள்",
-    "Looking for a kind, understanding, and family-oriented partner with good values, who respects relationships, maintains a positive outlook, and supports mutual growth in both personal and professional life.":
-        "நல்ல பண்புகள் கொண்ட, புரிதல் உள்ள, குடும்பத்தை மதிக்கும் வாழ்க்கைத் துணையை எதிர்பார்க்கிறேன். தனிநபர் மற்றும் தொழில் வளர்ச்சியில் ஒருவருக்கொருவர் ஆதரவாக இருந்து, நேர்மை, மரியாதை மற்றும் நல்ல புரிதலை மதிக்கும் நபராக இருக்க வேண்டும்.",
 
     // UI Labels - Fields (Contact)
     "Contact Person": "தொடர்பு நபர்",

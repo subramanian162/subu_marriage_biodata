@@ -2,7 +2,7 @@ const profileData = {
     // Basic Information
     profile_image: "images/profile.jpg",
     name: "Subramanian G",
-    subtitle: "Working as AI Engineer on MetLife, based in Hyderabad",
+    subtitle: "Working as Senior Full Stack Software Engineer on MetLife, based in Hyderabad",
     age_badge: "29 Years",
     height_badge: "5 ft 5 in (165 cm)",
     work_location_badge: "Hyderabad",
@@ -33,7 +33,6 @@ const profileData = {
     edu_2_desc: "Little Angels Higher Secondary School, Namakkal",
 
     // Professional Details
-    role_val: "AI Engineer",
     company_val: "MetLife",
     designation_val: "Sr. Platform Engineer II",
     work_location_val: "Hyderabad",
@@ -59,20 +58,16 @@ const profileData = {
 
     // Horoscope Details
     horoscope_dob_val: "16-Feb-1997",
-    tob_val: "?", // 10:45 AM
     pob_val: "Shenkottai, Tamilnadu (India)",
     rasi_val: "Rishabam (Taurus)",
     star_val: "Rohini",
-    gothram_val: "?",
-    lagna_val: "?",
     horo_avail_val: "Yes",
 
     // Family Details
     father_name_val: "Mr. Ganesan V",
-    father_occ_val: "Farmer",
+    father_occ_val: "Business",
     mother_name_val: "Mrs. Manimegalai G",
     mother_occ_val: "Homemaker",
-    siblings_val: "2 Younger Sisters",
     sister_val: "2 (Married, Homemaker)",
     family_type_val: "Nuclear Family",
     native_val: "Vasudevanallur, Thenkasi(District)",
@@ -82,7 +77,6 @@ const profileData = {
     pref_lang_val: "Tamil",
     pref_edu_val: "Post Graduate / Graduate in any professional stream",
     pref_food_val: "Non-Vegetarian",
-    pref_other_val: "Looking for a kind, understanding, and family-oriented partner with good values, who respects relationships, maintains a positive outlook, and supports mutual growth in both personal and professional life.",
 
     // Contact Details
     contact_person_val: "Ganesan V (Father)",
